@@ -1,6 +1,6 @@
 # travis-encrypt-cli
 Command-line Unix script to [encrypt sensitive information][doc] in
-[<img src="https://cdn.travis-ci.com/images/logos/TravisCI-Mascot-1-bc6a3179f3e8e1ab1456634bd55a448a.png" width=32 /> Travis CI][travis]
+[<img src="https://cdn.travis-ci.com/images/logos/TravisCI-Mascot-1-20feeadb48fc2492ba741d89cb5a5c8a.png" width=32 /> Travis CI][travis]
 .travis.yml files.
 
 ## Dependencies
@@ -19,9 +19,7 @@ echo -n 'variable=value' | ./encrypt_for_travis.bash user/repo
 
 You **must** use `echo -n` to not add newline character at the end of the encoded
 string. For the same reason you **cannot** use [here strings] like:
-```
-<<<'variable=value' ./encrypt_for_travis.bash user/repo
-```
+<pre><del><<<'variable=value' ./encrypt_for_travis.bash user/repo</del></pre>
 
 If you need proxy to access Travis website you should define HTTPS_PROXY
 [environment variable for curl][proxy] globally or per request:
